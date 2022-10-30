@@ -1,0 +1,70 @@
+[main]
+mode = selling
+; maximum number of allowed boughts without sell
+max_boughts = 1
+; current stop loss value
+stop_loss = 0
+stop_loss_p = 0
+; this setting is just for internal calculations and not used in trades
+take_profit = 0
+; this is depth of the candle bars in minutes or hours
+; trading with 1m depth is dangerous and not good because of the fees
+; different values affect strategy settings
+; valid values are: 1m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 12h, 1d, 3d, 1w, 1m
+minutes = 5m
+; quotes of basic asset like usdt you want to spend on each transaction
+; less value is less income and less risk
+trade_sum = 30
+; strategy name to use while trading
+; "mixed", "mixed_exp" "ema10" strategies are the best ones for now, but it cannot make much profit on high grow
+; ema10 is good at 15m depth
+; valid values are: ema5, ema9, ema10, macd, mixed
+strategy = new_vision
+; these arguments have no meaning for real sales, they are just for convenience
+virtual_usdt = 69.98051050000001
+virtual_coin = 75.0
+virtual_total = 99.940021
+order_id = 
+profit_armed = False
+profit_threshold = 0
+profit_level0 = 0
+qty_level0 = 75.0
+
+[new_vision]
+buying = False
+mode = 2
+;
+; cooldown candles is number of candles to skip before next buy after buy.
+; this is to prevent multiple buys on market going down.
+cooldown_candles = 24
+; minimum candle size in parts of 1: 0.007 is a good value
+; minimum candle size will limit buy operation, 0 - no limit
+min_candle = 0.0
+; profit k is multiplier for buy price. after bought the bot will wait until price goes up to value
+; buy_price * profit_k and then will try to sell assets
+profit_k = 1.007
+buy_price = 0.3998647673982113
+max_price = 0.38994917687973757
+; loss k is multiplier for buy price. after bought the bot will wait until price goes down to value
+; buy_price * loss_k and then will try to sell assets to prevent much loss
+loss_k = 0.94
+loss_price = 0.38129508191679573
+price_avg_index = 6
+back_view = 14
+buys0 = 2,0.38129508191679573,0.3998647673982113,0.40254305785264294
+; rsi - relative strength index, - means current market state (0 - 100%)
+; if rsi is below low value, it means that market is over-sold, and maybe
+; the price will go up soon. if rsi is above hi value, it means that
+; market is over-bought, and maybe the price will go down soon.
+; setting low value too small can cause, that the bot will never buy assets
+; setting low value too big can cause, that the bot will buy assets when market is flat state
+; setting hi value too big can cause, that the bot will never sell assets
+; setting hi value too small can cause, that the bot will sell assets when market in the flat state or too early
+rsi_low_critical = 0
+rsi_low_danger = 26
+rsi_low = 40
+rsi_hi = 60
+use_ema_for_rsi = False
+index = 6
+rsi_price = 0.38703
+

@@ -1,0 +1,13 @@
+./strategies/stupid.py:3ad0e20216baba41be9340ae887da899
+./strategies/mixed.py:b2fb52a5e25a5fcb1063e041c6e42b4e
+./trade.py:8bc3cf175d57c31feab4e3df77acea81
+./strategies/__init__.py:08722388e00a3ed98cbbfb672c33d1ae
+./tools/refresh_license.py:d37db5b5eb3be788f7c228af79e346b4
+./strategies/base_strategy.py:c57e3b686b5a4e9176f35448e3e8be38
+./strategies/macd.py:8a25c922490d35f96525e07eb86144fd
+./strategies/ma.py:9d677268b2a6b130912b82ff73a6c7cf
+./strategies/step_by_step.py:29cde69f62f15eac6ce45ee7917d3dfc
+./binance.py:993d91abbcacfa0d376b9b1c013c4d58
+./telegram.py:9328974fbae980c71f23833573436a54
+./strategies/macross.py:38712f3fbc7e13661290350a6cd54fa8
+./strategies/new_vision.py:936a9920a7bdd4528c27a27b6b50a99e

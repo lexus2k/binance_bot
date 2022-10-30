@@ -1,0 +1,18 @@
+[Unit]
+Description=BTT money bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=htpc
+Group=htpc
+Type=simple
+WorkingDirectory=/home/htpc/binance_bot
+ExecStart=/usr/bin/python3 /home/htpc/binance_bot/trade.py BTT
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
